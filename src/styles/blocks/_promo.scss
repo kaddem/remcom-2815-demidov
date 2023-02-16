@@ -1,4 +1,39 @@
 .promo {
-  padding: 50px 0;
-  background-color: rgba($color-light, .2);
+  padding: 140px 0;
+  background-color: rgba($color-light, 0.2);
+}
+
+.promo-inner {
+  @include inner;
+}
+
+.promo-wrap {
+  display: flex;
+}
+
+.promo-info {
+  flex-basis: 50%;
+  flex-shrink: 0;
+}
+
+.promo-title {
+  margin-bottom: 70px;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 44px;
+  color: $color-accent;
+
+  span {
+    display: block;
+    margin-bottom: 20px;
+    font-family: $font-title;
+    font-weight: 300;
+    font-size: 116px;
+    line-height: 136px;
+  }
+}
+
+.promo-visual {
+  flex-basis: 50%;
+  flex-shrink: 0;
 }

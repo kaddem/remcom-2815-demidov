@@ -1,0 +1,21 @@
+.main-menu {
+  ul {
+    display: flex;
+    list-style: none;
+  }
+
+  li {
+    margin-left: 30px;
+  }
+
+  a {
+    color: $color-light;
+    font-size: 24px;
+    line-height: 33px;
+    text-decoration: none;
+
+    &:hover {
+      color: $color-accent;
+    }
+  }
+}

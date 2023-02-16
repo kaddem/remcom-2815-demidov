@@ -1,0 +1,40 @@
+.services {
+  padding: 100px 0;
+  background-color: $color-light;
+}
+
+.services-inner {
+  @include inner;
+}
+
+.services-title {
+  @include section-title;
+}
+
+.services-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -$gap-half;
+  margin-right: -$gap-half;
+  list-style: none;
+}
+
+.services-item {
+  flex-basis: 50%;
+  margin-top: 50px;
+  padding: 0 $gap-half;
+}
+
+.services-caption {
+  margin-bottom: 30px;
+  font-family: $font-title;
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 47px;
+}
+
+.services-text {
+  font-weight: 300;
+  font-size: 28px;
+  line-height: 38px;
+}

@@ -1,0 +1,42 @@
+.form {
+  display: flex;
+  flex-wrap: wrap;
+  width: 66.66%;
+  margin: 70px auto 0;
+  border: 1px solid #000;
+}
+
+.form-field {
+  flex-basis: 100%;
+  padding: 0 $gap-half;
+  margin-bottom: 30px;
+}
+
+.form-field-half {
+  flex-basis: 50%;
+}
+
+.form-label {
+  padding-left: 20px;
+  font-size: 20px;
+  line-height: 27px;
+  color: $color-accent;
+}
+
+.form-input,
+.form-textarea {
+  width: 100%;
+  padding: 20px;
+  font-family: $font;
+  font-size: 20px;
+  line-height: 27px;
+  border-radius: 8px;
+  background-color: $color-light;
+  border: none;
+  color: inherit;
+}
+
+.form-textarea {
+  resize: vertical;
+  height: 167px;
+}
