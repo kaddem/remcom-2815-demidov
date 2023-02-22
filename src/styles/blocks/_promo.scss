@@ -14,6 +14,7 @@
 .promo-info {
   flex-basis: 50%;
   flex-shrink: 0;
+  padding-right: $gap-half;
 }
 
 .promo-title {
@@ -36,4 +37,22 @@
 .promo-visual {
   flex-basis: 50%;
   flex-shrink: 0;
+  padding-left: $gap-half;
 }
+
+.promo-figure {
+  position: relative;
+}
+
+.promo-image-caption {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  padding: 10px;
+  background-color: rgba($color-dark, .5);
+  color: $color-light;
+}
+
+
+

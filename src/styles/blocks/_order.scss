@@ -10,3 +10,21 @@
 .order-title {
   @include section-title;
 }
+
+.order-separator {
+  position: relative;
+
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: block;
+    width: 1278px;
+    height: 1px;
+    margin: 0 auto;
+    background-color: $color-dark;
+    opacity: .2;
+  }
+}

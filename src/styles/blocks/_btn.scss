@@ -12,6 +12,10 @@
   border-radius: 5px;
   border: none;
   cursor: pointer;
+
+  &:disabled {
+    background-color: rgba($color-dark, .1);
+  }
 }
 
 .btn-full {

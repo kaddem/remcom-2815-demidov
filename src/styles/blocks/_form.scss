@@ -34,9 +34,38 @@
   background-color: $color-light;
   border: none;
   color: inherit;
+
+  &:disabled {
+    background-color: rgba($color-dark, .1);
+  }
 }
 
 .form-textarea {
   resize: vertical;
   height: 167px;
+}
+
+.form-checkbox {
+  display: none;
+}
+
+.form-checkbox-text {
+  display: flex;
+}
+
+.form-checkbox:checked + .form-checkbox-text {
+  .form-checkbox-icon {
+    background-color: $color-accent;
+    box-shadow: inset 0 0 0 3px #fff;
+  }
+}
+
+.form-checkbox-icon {
+  flex-shrink: 0;
+  display: block;
+  margin-right: 10px;
+  width: 32px;
+  height: 32px;
+  border: 2px solid $color-accent;
+  border-radius: 5px;
 }

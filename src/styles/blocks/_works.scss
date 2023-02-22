@@ -1,0 +1,12 @@
+.works {
+  padding: 140px 0 130px;
+  background-color: rgba($color-light, .2);
+}
+
+.works-inner {
+  @include inner;
+}
+
+.works-title {
+  @include section-title;
+}

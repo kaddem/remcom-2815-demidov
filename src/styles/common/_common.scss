@@ -10,5 +10,6 @@ body {
 }
 
 img {
+  display: block; // убираем полосу под картинками
   max-width: 100%;
 }
