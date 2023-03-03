@@ -16,6 +16,28 @@
   &:disabled {
     background-color: rgba($color-dark, .1);
   }
+
+  // .promo-visual & {
+  //   display: none;
+
+  //   @media (max-width: $mobile-max) {
+  //     display: inline-block;
+  //   }
+  // }
+}
+
+.btn-mobile {
+  display: none;
+
+  @media (max-width: $mobile-max) {
+    display: inline-block;
+  }
+}
+
+.btn-tablet {
+  @media (max-width: $mobile-max) {
+    display: none;
+  }
 }
 
 .btn-full {

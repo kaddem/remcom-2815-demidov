@@ -1,15 +1,41 @@
 .main-menu {
-  @media (max-width: 1279px) {
+  @media (max-width: $tablet-max) {
     display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    padding: 20px 0;
+    background-color: $color-dark;
+    border-top: 1px solid $color-light;
   }
 
   ul {
     display: flex;
     list-style: none;
+
+    @media (max-width: $tablet-max) {
+      justify-content: center;
+    }
+
+    @media (max-width: $mobile-max) {
+      display: block;
+    }
   }
 
   li {
     margin-left: 30px;
+
+    &:first-child {
+      margin-left: 0;
+    }
+
+    @media (max-width: $mobile-max) {
+      margin-left: 0;
+      margin-top: 20px;
+      margin-bottom: 20px;
+      text-align: center;
+    }
   }
 
   a {

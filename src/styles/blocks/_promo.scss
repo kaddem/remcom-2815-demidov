@@ -1,6 +1,15 @@
 .promo {
   padding: 140px 0;
   background-color: rgba($color-light, 0.2);
+
+  @media (max-width: $tablet-max) {
+    padding: 90px 0;
+  }
+
+  @media (max-width: $mobile-max) {
+    padding: 60px 0;
+    text-align: center;
+  }
 }
 
 .promo-inner {
@@ -16,10 +25,13 @@
 }
 
 .promo-info {
-  width: 50%;
-  // flex-basis: 50%;
+  flex-basis: 50%;
   flex-shrink: 0;
   padding-right: $gap-half;
+
+  @media (max-width: $mobile-max) {
+    padding-right: 0;
+  }
 }
 
 .promo-title {
@@ -30,6 +42,7 @@
   color: $color-accent;
 
   @media (max-width: $tablet-max) {
+    margin-bottom: 40px;
     font-size: 24px;
     line-height: 33px;
   }
@@ -53,6 +66,7 @@
     }
 
     @media (max-width: $mobile-max) {
+      margin-bottom: 10px;
       font-size: 54px;
       line-height: 63px;
     }
@@ -60,14 +74,21 @@
 }
 
 .promo-visual {
-  width: 50%;
-  // flex-basis: 50%;
+  flex-basis: 50%;
   flex-shrink: 0;
   padding-left: $gap-half;
+
+  @media (max-width: $mobile-max) {
+    padding-left: 0;
+  }
 }
 
 .promo-figure {
   position: relative;
+
+  @media (max-width: $mobile-max) {
+    margin-bottom: 50px;
+  }
 }
 
 .promo-image-caption {
