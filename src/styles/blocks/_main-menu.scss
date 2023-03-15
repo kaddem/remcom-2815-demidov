@@ -10,6 +10,12 @@
     border-top: 1px solid $color-light;
   }
 
+  &.is-open {
+    @media (max-width: $tablet-max) {
+      display: block;
+    }
+  }
+
   ul {
     display: flex;
     list-style: none;
