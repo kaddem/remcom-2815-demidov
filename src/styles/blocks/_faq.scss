@@ -10,3 +10,36 @@
 .faq-title {
   @include section-title;
 }
+
+.accordion {
+  margin-top: 40px;
+  box-shadow: 0px 0px 8px rgba($color-accent, .2);
+  border-radius: 4px;
+
+  &:nth-of-type(1) {
+    margin-top: 100px;
+  }
+}
+
+.accordion-btn {
+  display: block;
+  width: 100%;
+  padding: 30px;
+  font-family: $font-title;
+  font-weight: 300;
+  font-size: 36px;
+  line-height: 42px;
+  text-align: left;
+  color: inherit;
+  background-color: rgba(0, 0, 0, 0);
+  border: none;
+  cursor: pointer;
+}
+
+.accordion-answear {
+  display: none;
+  padding: 0 30px 30px;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 25px;
+}

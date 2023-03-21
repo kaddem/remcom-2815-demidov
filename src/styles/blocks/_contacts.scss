@@ -10,3 +10,11 @@
 .contacts-title {
   @include section-title;
 }
+
+.contacts-item {
+  display: none;
+
+  &.active {
+    display: block;
+  }
+}

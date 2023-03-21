@@ -14,7 +14,7 @@
     <div class="header-inner">
       <div class="header-wrap">
         <a href="index.html" class="header-logo">RemCom</a>
-        <nav class="main-menu">
+        <nav class="main-menu j-main-menu">
           <ul>
             <li>
               <a href="reviews.html">Отзывы</a>
@@ -26,12 +26,12 @@
               <a href="contacts.html">Контакты</a>
             </li>
             <li>
-              <a href="works.html">Наши работы</a>
+              <a href="works.html" class="active">Наши работы</a>
             </li>
           </ul>
         </nav>
         <a href="tel:+78128888888" class="header-phone">+7 812 888-88-88</a>
-        <button class="burger">menu</button>
+        <button class="burger j-burger">menu</button>
       </div>
     </div>
   </header>
@@ -40,6 +40,39 @@
     <section class="works">
       <div class="works-inner">
         <h1 class="works-title">Наши работы</h1>
+
+        <ul class="filter">
+          <li class="filter-item">
+            <a href="#" class="filter-link j-works-link active" data-filter="all">Все</a>
+          </li>
+          <li class="filter-item">
+            <a href="#" class="filter-link j-works-link" data-filter="electro">Электроника</a>
+          </li>
+          <li class="filter-item">
+            <a href="#" class="filter-link j-works-link" data-filter="wood">Мебель</a>
+          </li>
+        </ul>
+
+        <ul class="works-list">
+          <li class="works-item j-works-item" data-type="electro">
+            <div class="works-card">Электровеник</div>
+          </li>
+          <li class="works-item j-works-item" data-type="wood">
+            <div class="works-card">Деревянные тапочки</div>
+          </li>
+          <li class="works-item j-works-item" data-type="electro">
+            <div class="works-card">Синхрофазотрон</div>
+          </li>
+          <li class="works-item j-works-item" data-type="wood">
+            <div class="works-card">Чайник из бука</div>
+          </li>
+          <li class="works-item j-works-item" data-type="electro">
+            <div class="works-card">Пепелац</div>
+          </li>
+          <li class="works-item j-works-item" data-type="wood">
+            <div class="works-card">Плотяной шкаф</div>
+          </li>
+        </ul>
       </div>
     </section>
 
@@ -95,6 +128,7 @@
     </div>
   </footer>
 
+  <script src="scripts/jquery-3.6.4.min.js"></script>
   <script src="scripts/script.js"></script>
 </body>
 

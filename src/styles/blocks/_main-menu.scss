@@ -50,7 +50,8 @@
     line-height: 33px;
     text-decoration: none;
 
-    &:hover {
+    &:hover,
+    &.active {
       color: $color-accent;
     }
   }
