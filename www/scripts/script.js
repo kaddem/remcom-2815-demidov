@@ -1,7 +1,7 @@
-$(document).ready(function() {
+$(document).ready(function () {
 
 
-  $('.j-burger').on('click', function() {
+  $('.j-burger').on('click', function () {
     $('.j-main-menu').toggleClass('is-open');
   });
 
@@ -9,7 +9,7 @@ $(document).ready(function() {
   // Аккордеоны 1
   let prevAccordionBtn = undefined;
 
-  $('.j-accordion-btn').on('click', function() {
+  $('.j-accordion-btn').on('click', function () {
 
     if (prevAccordionBtn === this) {
       $(this).next().slideToggle();
@@ -23,7 +23,7 @@ $(document).ready(function() {
 
 
   // Табы
-  $('.j-contacts-link').on('click', function() {
+  $('.j-contacts-link').on('click', function () {
     let index = $(this).index('.j-contacts-link');
 
     $('.j-contacts-link').removeClass('active');
@@ -38,7 +38,7 @@ $(document).ready(function() {
 
 
   // Фильтр в наших работах
-  $('.j-works-link').on('click', function() {
+  $('.j-works-link').on('click', function () {
     $('.j-works-link').removeClass('active');
     $(this).addClass('active');
 
@@ -50,7 +50,7 @@ $(document).ready(function() {
     }
 
     // Внутри each - свой собственный this
-    $('.j-works-item').each(function() {
+    $('.j-works-item').each(function () {
       let dataType = $(this).data('type');
 
       if (dataFilter === dataType) {
@@ -63,9 +63,54 @@ $(document).ready(function() {
   });
 
 
+  // Ajax запрос отывов
+  $('.j-reviews-btn').on('click', function () {
+
+    $.ajax({
+      type: 'POST',
+      url: '../jsons/reviews.json',
+      data: {
+        count: 2
+      },
+      success: function (responce) {
+        let htmlStr = createHtmlString(responce);
+        addToPage(htmlStr);
+      },
+      error: function (error) {
+        console.log(error);
+      }
+    });
+
+
+
+  });
+
+  function createHtmlString(data) {
+    let htmlString = '';
+    let reviewsArray = data.reviews;
+    
+    reviewsArray.forEach(function(review) {
+      console.log(review);
+      htmlString = htmlString + `<div class="reviews-item">
+      <img src="${review.imgUrl}" alt="${review.imgAlt}" class="reviews-ava" />
+      <div class="reviews-text">
+        <strong class="reviews-name">${review.name}</strong>
+        <blockquote class="reviews-quote">
+          “${review.text}”
+        </blockquote>
+      </div>
+    </div>`;
+    });
+
+    return htmlString;
+  }
+
+  function addToPage(str) {
+    $('.j-reviews-wrap').append(str);
+  }
+
+
 });
-
-
 
 
 
