@@ -65,6 +65,10 @@ $(document).ready(function () {
 
   // Ajax запрос отывов
   $('.j-reviews-btn').on('click', function () {
+    let thisBtn = this;
+    
+    $(thisBtn).addClass('btn-sending');
+    $(thisBtn).attr('disabled', 'disabled');
 
     $.ajax({
       type: 'POST',
@@ -73,6 +77,8 @@ $(document).ready(function () {
         count: 2
       },
       success: function (responce) {
+        $(thisBtn).removeClass('btn-sending');
+        $(thisBtn).removeAttr('disabled');
         let htmlStr = createHtmlString(responce);
         addToPage(htmlStr);
       },
@@ -90,7 +96,6 @@ $(document).ready(function () {
     let reviewsArray = data.reviews;
     
     reviewsArray.forEach(function(review) {
-      console.log(review);
       htmlString = htmlString + `<div class="reviews-item">
       <img src="${review.imgUrl}" alt="${review.imgAlt}" class="reviews-ava" />
       <div class="reviews-text">

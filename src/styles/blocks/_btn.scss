@@ -43,3 +43,27 @@
 .btn-full {
   width: 100%;
 }
+
+.btn-animation-shake {
+  animation: shake 100ms infinite linear;
+}
+
+.btn-sending {
+  position: relative;
+
+  &:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    display: block;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    box-shadow: 2px 2px  0 3px $color-dark,;
+    animation: spin 2s infinite linear;
+  }
+}

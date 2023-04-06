@@ -85,10 +85,23 @@
 
 .promo-figure {
   position: relative;
+  // overflow: hidden;
 
   @media (max-width: $mobile-max) {
     margin-bottom: 50px;
   }
+
+  &:hover {
+    .promo-img {
+      opacity: 1;
+      transform: scaleX(1.3) rotate(10deg) translate(100px, 100px);
+    }
+  }
+}
+
+.promo-img {
+  opacity: 0.5;
+  transition: opacity 2s, transform 3s 2s;
 }
 
 .promo-image-caption {
